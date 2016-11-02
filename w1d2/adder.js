@@ -44,14 +44,14 @@ Need to split the array up, and start at index 2
 // Outputs = returns number that is the sum
 
 function add(numbers) {
-  for (var i = 0; i < numbers.length; i += 1) {
+    for (var i = 0; i < numbers.length; i += 1) {
     number = Number(numbers[i]);
     debugger;
     if ( !Number.isNan(number)) {
       sum = sum + number;
     }
   }
-  return sum;
+return sum;
 }
 
 
