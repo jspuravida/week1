@@ -1,16 +1,16 @@
 function countLetters(str) {
-  var combine = str.split(" ").join(""); // eliminates spaces
+  var combine = str.split(" ").join("");
   var tracker = {};
   var current = [];
 
   for (var i = 0; i < combine.length; i += 1) {
 
-    current = combine[i]; //sets current to the current letter
+    current = combine[i];
 
     if (tracker[current]) {  // checks if the current letter exists in object
-      tracker[current] = tracker[current] + 1  // adds one to the count if so
+      tracker[current] = [tracker[current] +  ", " + i];  // adds one to the count if so
     } else {
-      tracker[current] = 1 // sets it to one, if it doesn't exist
+      tracker[current] = [i]; // sets it to one, if it doesn't exist
     }
   }
   console.log(tracker);
